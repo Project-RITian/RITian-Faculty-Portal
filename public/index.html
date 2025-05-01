@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty Portal</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <h1>Faculty Portal</h1>
+                <button id="close-sidebar" class="close-btn"><i class="fas fa-times"></i></button>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="active"><a href="#"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                    <li><a href="#"><i class="fas fa-calendar"></i> My Timetable</a></li>
+                    <li><a href="#"><i class="fas fa-book"></i> My Subjects</a></li>
+                    <li><a href="#"><i class="fas fa-file-alt"></i> My Lesson Plans</a></li>
+                    <li><a href="#"><i class="fas fa-users"></i> Staff Edge</a></li>
+                    <li><a href="#"><i class="fas fa-user-check"></i> Student Daily Attendance</a></li>
+                    <li><a href="#"><i class="fas fa-clock"></i> Day Attendance Summary</a></li>
+                    <li><a href="#"><i class="fas fa-user"></i> Student Edge</a></li>
+                    <li><a href="#"><i class="fas fa-file-import"></i> Apply Leave/OD</a></li>
+                    <li><a href="#"><i class="fas fa-clipboard-check"></i> Subject Attendance Report</a></li>
+                    <li><a href="#"><i class="fas fa-exchange-alt"></i> Alteration Requests</a></li>
+                    <li><a href="#"><i class="fas fa-bell"></i> Permission Requests</a></li>
+                    <li><a href="#"><i class="fas fa-user-check"></i> Staff Personal Attendance</a></li>
+                    <li><a href="#"><i class="fas fa-file-import"></i> Student Leave Report</a></li>
+                    <li><a href="#"><i class="fas fa-clipboard-check"></i> Subject Reg Requests</a></li>
+                    <li><a href="#"><i class="fas fa-file-alt"></i> Syllabus Completion Report</a></li>
+                    <li><a href="#"><i class="fas fa-file-spreadsheet"></i> Marks Entry</a></li>
+                    <li><a href="#"><i class="fas fa-eye"></i> View Marks</a></li>
+                    <li><a href="#"><i class="fas fa-users-cog"></i> Committee</a></li>
+                    <li><a href="#"><i class="fas fa-comment"></i> Feedbacks</a></li>
+                    <li><a href="#"><i class="fas fa-envelope"></i> Messages</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="header">
+                <button id="toggle-sidebar" class="menu-btn"><i class="fas fa-bars"></i></button>
+                <div class="header-right">
+                    <!-- Notification Button -->
+                    <div class="notification" id="notification-btn">
+                        <i class="fas fa-bell"></i>
+                        <span class="notification-dot"></span>
+                        <!-- Notification Dropdown -->
+                        <div class="notification-dropdown">
+                            <div class="dropdown-header">
+                                <h3>Notifications</h3>
+                                <button class="mark-all-read">Mark all as read</button>
+                            </div>
+                            <ul class="notification-list">
+                                <li class="unread">
+                                    <i class="fas fa-envelope notification-icon"></i>
+                                    <div class="notification-content">
+                                        <p>New message from Admin</p>
+                                        <span class="notification-time">2 hours ago</span>
+                                    </div>
+                                </li>
+                                <li class="unread">
+                                    <i class="fas fa-calendar notification-icon"></i>
+                                    <div class="notification-content">
+                                        <p>Timetable updated</p>
+                                        <span class="notification-time">Yesterday</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class="fas fa-user-check notification-icon"></i>
+                                    <div class="notification-content">
+                                        <p>Attendance report submitted</p>
+                                        <span class="notification-time">3 days ago</span>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="dropdown-footer">
+                                <a href="#">View all notifications</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Profile Dropdown -->
+                    <div class="profile-dropdown-container" id="profile-dropdown-container">
+                        <button class="profile-dropdown-btn">
+                            <img src="https://via.placeholder.com/32" alt="Profile" class="profile-img-small"
+                                id="header-profile-img">
+                            <span class="profile-name">PROFILE</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+
+                        <!-- Profile Dropdown Menu -->
+                        <div class="profile-dropdown-menu">
+                            <div class="profile-header">
+                                <div class="profile-img-container">
+                                    <img src="https://via.placeholder.com/80" alt="Profile" class="profile-img"
+                                        id="dropdown-profile-img">
+                                    <div class="change-photo-overlay">
+                                        <i class="fas fa-camera"></i>
+                                        <input type="file" id="profile-photo-input" accept="image/*">
+                                    </div>
+                                </div>
+                                <div class="profile-info">
+                                    <h3>PROFILE</h3>
+                                    <p>Associate Professor</p>
+                                </div>
+                            </div>
+
+                            <div class="profile-details">
+                                <div class="detail-item">
+                                    <span class="detail-label">Staff Code:</span>
+                                    <span class="detail-value">MA44</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Email:</span>
+                                    <span class="detail-value">faculty@college.edu.in</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Department:</span>
+                                    <span class="detail-value">Computer Science</span>
+                                </div>
+                            </div>
+
+                            <div class="profile-actions">
+                                <a href="#" class="profile-action"><i class="fas fa-user"></i> View Profile</a>
+                                <a href="#" class="profile-action"><i class="fas fa-cog"></i> Account Settings</a>
+                                <a href="#" class="profile-action"><i class="fas fa-key"></i> Change Password</a>
+                                <a href="#" class="profile-action"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Content Area -->
+            <div class="content">
+                <div class="welcome-section">
+                    <h1>Hi, welcome back!</h1>
+                    <h2>Dashboard</h2>
+                </div>
+
+                <!-- Dashboard Cards -->
+                <div class="dashboard-cards">
+                    <div class="card green">
+                        <div class="card-content">
+                            <h3 class="card-value">0</h3>
+                            <p class="card-title">Current Pen Leader</p>
+                        </div>
+                        <div class="card-footer">
+                            <span>Rank Score</span>
+                            <a href="#" class="more-info">More info <i class="fas fa-arrow-circle-right"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="card yellow">
+                        <div class="card-content">
+                            <h3 class="card-value">44</h3>
+                            <p class="card-title">Life Time Leader Board</p>
+                        </div>
+                        <div class="card-footer">
+                            <span>Rank</span>
+                            <a href="#" class="more-info">More info <i class="fas fa-arrow-circle-right"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="card blue">
+                        <div class="card-content">
+                            <h3 class="card-value">150</h3>
+                            <p class="card-title">Life Time Edit Score</p>
+                        </div>
+                        <div class="card-footer">
+                            <span>Score</span>
+                            <a href="#" class="more-info">More info <i class="fas fa-arrow-circle-right"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="card red">
+                        <div class="card-content">
+                            <h3 class="card-value">15</h3>
+                            <p class="card-title">Merit Level</p>
+                        </div>
+                        <div class="card-footer">
+                            <span>Level</span>
+                            <a href="#" class="more-info">More info <i class="fas fa-arrow-circle-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Academic Metrics Section -->
+                <div class="section-container">
+                    <div class="section-header">
+                        <h2>Academic Metrics</h2>
+                    </div>
+                    <div class="section-content">
+                        <table class="metrics-table">
+                            <thead>
+                                <tr>
+                                    <th>Subject</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Event Participation</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <td>Awards</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <td>Patents</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <td>Online Courses</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <td>IV</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <td>Industrial Experience</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <td>Interns</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <td>Industrial Training</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <td>Event Organized</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <td>Journal</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <td>Conference</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <td>Text Book</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <td>Book Chapter</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <td>Ph.D</td>
+                                    <td>0</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <footer class="footer">
+                <p>© All rights reserved.</p>
+            </footer>
+        </main>
+    </div>
+
+    <!-- Profile Settings Modal -->
+    <div class="modal" id="notification-settings-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Notification Settings</h2>
+                <button class="close-modal">×</button>
+            </div>
+            <div class="modal-body">
+                <div class="settings-section">
+                    <h3>Notification Preferences</h3>
+                    <div class="setting-item">
+                        <label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="slider round"></span>
+                        </label>
+                        <div class="setting-info">
+                            <p>Email Notifications</p>
+                            <span>Receive notifications via email</span>
+                        </div>
+                    </div>
+                    <div class="setting-item">
+                        <label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="slider round"></span>
+                        </label>
+                        <div class="setting-info">
+                            <p>Browser Notifications</p>
+                            <span>Receive notifications in browser</span>
+                        </div>
+                    </div>
+                    <div class="setting-item">
+                        <label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="slider round"></span>
+                        </label>
+                        <div class="setting-info">
+                            <p>Sound Alerts</p>
+                            <span>Play sound when notification arrives</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="settings-section">
+                    <h3>Notification Types</h3>
+                    <div class="setting-item">
+                        <label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="slider round"></span>
+                        </label>
+                        <div class="setting-info">
+                            <p>Attendance Updates</p>
+                            <span>Notifications about attendance changes</span>
+                        </div>
+                    </div>
+                    <div class="setting-item">
+                        <label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="slider round"></span>
+                        </label>
+                        <div class="setting-info">
+                            <p>Timetable Changes</p>
+                            <span>Notifications about schedule changes</span>
+                        </div>
+                    </div>
+                    <div class="setting-item">
+                        <label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="slider round"></span>
+                        </label>
+                        <div class="setting-info">
+                            <p>Leave Requests</p>
+                            <span>Notifications about leave approvals/rejections</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary">Cancel</button>
+                <button class="btn btn-primary">Save Changes</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
